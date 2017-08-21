@@ -44,8 +44,7 @@ inline cudaStream_t legacy_stream()
 __host__ __device__
 inline cudaStream_t default_stream()
 {
-  // XXX we might actually want to use the per-thread default stream instead
-  return legacy_stream();
+  return cudaStreamPerThread;
 }
 
 
